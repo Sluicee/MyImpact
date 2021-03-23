@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">0</dimen>
+    <dimen name="activity_vertical_margin">0</dimen>
+
+    <dimen name="imageWidth">200</dimen>
+    <dimen name="imageHeight">200</dimen>
+
+    <dimen name="starHeight">65.2dp</dimen>
+    <dimen name="starWidth">25.5dp</dimen>
+
+    <dimen name="charActivityPadding">10dp</dimen>
+    <dimen name="charActivityHorizontalDivider">15dp</dimen>
+    <dimen name="charActivityCharNameSize">16pt</dimen>
+    <dimen name="weaponActivityWeaponNameSize">14pt</dimen>
+    <dimen name="charActivityCharNameWidth">220dp</dimen>
+    <dimen name="charActivityCharTitleSize">8pt</dimen>
+    <dimen name="charActivityCharImageSize">150dp</dimen>
+    <dimen name="charActivityCharDescNameWidth">170dp</dimen>
+    <dimen name="charActivityCharDescNameSize">8pt</dimen>
+    <dimen name="MaterialsImageSize">50dp</dimen>
+    <dimen name="MaterialsCountSize">20dp</dimen>
+    <dimen name="MaterialsCountTextSize">4pt</dimen>
+    <dimen name="MaterialsGridHorizontalSpacing">10dp</dimen>
+    <dimen name="MaterialsGridNum">3</dimen>
+    <dimen name="MaterialsGridHeight">180dp</dimen>
+    <dimen name="WeaponMaterialsGridHeight">120dp</dimen>
+    <dimen name="MaterialsTalantGridHeight">120dp</dimen>
+    <dimen name="constListHeight">700dp</dimen>
+    <dimen name="constTextSize">7pt</dimen>
+    <dimen name="listDividerWidth">50dp</dimen>
+</resources>

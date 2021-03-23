@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CharActivity"
+        android:padding="@dimen/charActivityPadding"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/gridItem"
+            android:layout_width="@dimen/charActivityCharImageSize"
+            android:layout_height="@dimen/charActivityCharImageSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/charImage"
+                android:layout_width="@dimen/charActivityCharImageSize"
+                android:layout_height="@dimen/charActivityCharImageSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/charStars"
+                android:layout_width="@dimen/starWidth"
+                android:layout_height="@dimen/starHeight"
+                android:src="@drawable/star1" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/charName"
+            android:layout_width="@dimen/charActivityCharNameWidth"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gridItem"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/ja_jp"
+            android:textSize="@dimen/charActivityCharNameSize"
+            android:textColor="@color/grey"/>
+
+        <TextView
+            android:id="@+id/charTitle"
+            android:layout_width="@dimen/charActivityCharNameWidth"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gridItem"
+            app:layout_constraintTop_toBottomOf="@+id/charName"
+            android:fontFamily="@font/ja_jp"
+            android:textSize="@dimen/charActivityCharTitleSize"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/charActivityHorizontalDivider"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/AllegianceTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+
+                <TextView
+                    android:id="@+id/AllegianceTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/WeaponTypeTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/WeaponTypeTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/ElementTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/ElementTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/BDayTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/BDayTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/AstrolabeNameTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/AstrolabeNameTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/ChineseSeiyuuTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/ChineseSeiyuuTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/JapSeiyuuTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/JapSeiyuuTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/EngSeiyuuTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/EngSeiyuuTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/KorSeiyuuTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/KorSeiyuuTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/InGameDescTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/InGameDescTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridItem"
+            android:layout_marginTop="@dimen/charActivityHorizontalDivider" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            android:layout_marginTop="@dimen/charActivityHorizontalDivider"/>
+
+        <TextView
+            android:id="@+id/AscensionMatHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ja_jp"
+            android:text="@string/AscensionMatHeader"
+            android:textSize="@dimen/charActivityCharTitleSize"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+        <GridView
+            android:id="@+id/AscensionMats"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/MaterialsGridHeight"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AscensionMatHeader"
+            android:numColumns="3"
+            android:verticalSpacing="@dimen/MaterialsGridHorizontalSpacing"
+            />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AscensionMats"
+            android:layout_marginTop="@dimen/charActivityHorizontalDivider"/>
+
+        <TextView
+            android:id="@+id/TalantMatHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ja_jp"
+            android:text="@string/TalantMatHeader"
+            android:textSize="@dimen/charActivityCharTitleSize"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+        <GridView
+            android:id="@+id/TalantMats"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/MaterialsTalantGridHeight"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TalantMatHeader"
+            android:numColumns="4"
+            android:verticalSpacing="@dimen/MaterialsGridHorizontalSpacing"
+            />
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TalantMats"
+            android:layout_marginTop="@dimen/charActivityHorizontalDivider"/>
+
+        <TextView
+            android:id="@+id/ConstHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ja_jp"
+            android:text="@string/ConstHeader"
+            android:textSize="@dimen/charActivityCharTitleSize"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+        <ListView
+            android:id="@+id/constList"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/constListHeight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ConstHeader"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

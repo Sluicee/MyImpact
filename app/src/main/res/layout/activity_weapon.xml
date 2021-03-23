@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CharActivity"
+        android:padding="@dimen/charActivityPadding">
+
+
+        <RelativeLayout
+            android:id="@+id/gridItem"
+            android:layout_width="@dimen/charActivityCharImageSize"
+            android:layout_height="@dimen/charActivityCharImageSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/weaponImage"
+                android:layout_width="@dimen/charActivityCharImageSize"
+                android:layout_height="@dimen/charActivityCharImageSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/weaponStars"
+                android:layout_width="@dimen/starWidth"
+                android:layout_height="@dimen/starHeight"
+                android:src="@drawable/star1" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/weaponName"
+            android:layout_width="@dimen/charActivityCharNameWidth"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ja_jp"
+            android:text="TextView"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/weaponActivityWeaponNameSize"
+            app:layout_constraintBottom_toBottomOf="@+id/gridItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gridItem"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/charActivityHorizontalDivider"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/DescriptionTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+
+                <TextView
+                    android:id="@+id/DescriptionTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/WeaponTypeTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/WeaponTypeTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/BaseAttackTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/BaseAttackTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/SecStatTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/SecStatTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/BaseAttack90Title"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/BaseAttack90TW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/SecStat90Title"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/SecStat90TW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/PassiveTitle"
+                    android:layout_width="@dimen/charActivityCharDescNameWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+                <TextView
+                    android:id="@+id/PassiveTW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ja_jp"
+                    android:text="TextView"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/charActivityCharTitleSize" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridItem"
+            android:layout_marginTop="@dimen/charActivityHorizontalDivider" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            android:layout_marginTop="@dimen/charActivityHorizontalDivider"/>
+
+        <TextView
+            android:id="@+id/AscensionMatHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ja_jp"
+            android:text="@string/AscensionMatHeader"
+            android:textSize="@dimen/charActivityCharTitleSize"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+        <GridView
+            android:id="@+id/AscensionMats"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/WeaponMaterialsGridHeight"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AscensionMatHeader"
+            android:numColumns="5"
+            android:verticalSpacing="@dimen/MaterialsGridHorizontalSpacing"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

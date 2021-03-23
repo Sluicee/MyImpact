@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HoneyImpact</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Characters</string>
+    <string name="title_notifications">Weapons</string>
+    <string name="db_name">honeyimpact.db</string>
+    <string name="reload_db">Update database</string>
+
+    <string name="AscensionMatHeader">Ascension Materials</string>
+    <string name="TalantMatHeader">Talants Materials</string>
+    <string name="ConstHeader">Constellation</string>
+</resources>

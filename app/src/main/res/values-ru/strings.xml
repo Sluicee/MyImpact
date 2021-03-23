@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HoneyImpact</string>
+    <string name="title_home">Главная</string>
+    <string name="title_dashboard">Персонажи</string>
+    <string name="title_notifications">Оружие</string>
+    <string name="db_name">honeyimpact_ru.db</string>
+    <string name="reload_db">Обновить базу данных</string>
+
+    <string name="AscensionMatHeader">Материалы для возвышения</string>
+    <string name="TalantMatHeader">Материалы для талантов</string>
+    <string name="ConstHeader">Созвездие</string>
+</resources>

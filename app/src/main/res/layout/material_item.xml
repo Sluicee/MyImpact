@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/MaterialsImageSize"
+        android:layout_height="@dimen/MaterialsImageSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/MaterialsImageSize"
+            android:layout_height="@dimen/MaterialsImageSize"
+            app:cardCornerRadius="50dp"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/matCardView">
+            <ImageView
+                android:id="@+id/material"
+                android:layout_width="@dimen/MaterialsImageSize"
+                android:layout_height="@dimen/MaterialsImageSize"
+                android:src="@drawable/firmarrowhead"
+                android:background="@color/blue"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/MaterialsCountSize"
+            android:layout_height="@dimen/MaterialsCountSize"
+            app:cardCornerRadius="50dp"
+            android:elevation="10dp"
+            android:layout_alignEnd="@+id/matCardView"
+            android:layout_alignBottom="@+id/matCardView">
+            <TextView
+                android:id="@+id/materialCount"
+                android:text="123"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/MaterialsCountTextSize"
+                android:fontFamily="@font/ja_jp"
+                android:textColor="@color/white"
+                android:background="@color/grey"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
