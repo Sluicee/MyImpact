@@ -10,4 +10,8 @@
     <string name="AscensionMatHeader">Материалы для возвышения</string>
     <string name="TalantMatHeader">Материалы для талантов</string>
     <string name="ConstHeader">Созвездие</string>
+
+    <string name="europe">Европа</string>
+    <string name="na">Северная Америка</string>
+    <string name="asia">Азия</string>
 </resources>

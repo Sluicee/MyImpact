@@ -30,4 +30,10 @@
     <dimen name="constListHeight">700dp</dimen>
     <dimen name="constTextSize">7pt</dimen>
     <dimen name="listDividerWidth">50dp</dimen>
+
+
+    <dimen name="clockHeight">180dp</dimen>
+    <dimen name="clockTextSize">60dp</dimen>
+    <dimen name="regionNameTextSize">40dp</dimen>
+    <dimen name="regionChangeTextSize">20dp</dimen>
 </resources>

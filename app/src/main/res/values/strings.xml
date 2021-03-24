@@ -9,4 +9,8 @@
     <string name="AscensionMatHeader">Ascension Materials</string>
     <string name="TalantMatHeader">Talants Materials</string>
     <string name="ConstHeader">Constellation</string>
+
+    <string name="europe">Europe</string>
+    <string name="na">North America</string>
+    <string name="asia">Asia</string>
 </resources>
