@@ -39,24 +39,22 @@
             android:id="@+id/charName"
             android:layout_width="@dimen/charActivityCharNameWidth"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/gridItem"
-            app:layout_constraintTop_toTopOf="parent"
             android:fontFamily="@font/ja_jp"
+            android:text="TextView"
+            android:textColor="@color/grey"
             android:textSize="@dimen/charActivityCharNameSize"
-            android:textColor="@color/grey"/>
+            app:layout_constraintStart_toEndOf="@+id/gridItem"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/charTitle"
             android:layout_width="@dimen/charActivityCharNameWidth"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/gridItem"
-            app:layout_constraintTop_toBottomOf="@+id/charName"
             android:fontFamily="@font/ja_jp"
-            android:textSize="@dimen/charActivityCharTitleSize"/>
+            android:text="TextView"
+            android:textSize="@dimen/charActivityCharTitleSize"
+            app:layout_constraintStart_toEndOf="@+id/gridItem"
+            app:layout_constraintTop_toBottomOf="@+id/charName" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -77,7 +75,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/AllegianceTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
 
                 <TextView
@@ -99,7 +97,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/WeaponTypeTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/WeaponTypeTW"
@@ -119,7 +117,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/ElementTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/ElementTW"
@@ -139,7 +137,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/BDayTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/BDayTW"
@@ -159,7 +157,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/AstrolabeNameTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/AstrolabeNameTW"
@@ -179,7 +177,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/ChineseSeiyuuTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/ChineseSeiyuuTW"
@@ -199,7 +197,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/JapSeiyuuTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/JapSeiyuuTW"
@@ -219,7 +217,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/EngSeiyuuTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/EngSeiyuuTW"
@@ -239,7 +237,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/KorSeiyuuTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/KorSeiyuuTW"
@@ -259,7 +257,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/InGameDescTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/InGameDescTW"
@@ -371,15 +369,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider5" />
 
-        <ListView
+        <com.example.honeyimpact.customlistview
             android:id="@+id/constList"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/constListHeight"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ConstHeader"
             android:divider="@null"
-            android:dividerHeight="0dp"/>
+            android:dividerHeight="2dp"
+            app:layout_constraintTop_toBottomOf="@id/ConstHeader"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

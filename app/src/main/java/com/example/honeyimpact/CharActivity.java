@@ -1,8 +1,11 @@
 package com.example.honeyimpact;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.icu.text.CaseMap;
+import android.os.Build;
 import android.os.Bundle;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -13,6 +16,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,9 +24,11 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 
@@ -94,15 +100,7 @@ public class CharActivity extends AppCompatActivity {
         constList = findViewById(R.id.constList);
 
         TextView[] charDescription = {
-                WeaponTypeTitle, WeaponTypeTW,
-                ElementTitle, ElementTW,
-                BDayTitle, BDayTW,
-                AstrolabeNameTitle, AstrolabeNameTW,
-                ChineseSeiyuuTitle, ChineseSeiyuuTW,
-                JapSeiyuuTitle, JapSeiyuuTW,
-                EngSeiyuuTitle, EngSeiyuuTW,
-                KorSeiyuuTitle,KorSeiyuuTW,
-                InGameDescTitle, InGameDescTW
+            WeaponTypeTW,ElementTW,BDayTW,AstrolabeNameTW,ChineseSeiyuuTW,JapSeiyuuTW,EngSeiyuuTW,KorSeiyuuTW,InGameDescTW
         };
 
         sqlHelper = new DatabaseHelper(this);
@@ -139,18 +137,11 @@ public class CharActivity extends AppCompatActivity {
                 break;
         }
 
-        int descI = 1;
+        int descI = 0;
         int descIcolmn = 6;
-        while (descI <= 18){
-            String[] columnName = (userCursor.getColumnName(descIcolmn)).split("(?=\\p{Upper})");
-            if (columnName.length > 1) {
-                charDescription[descI-1].setText(columnName[0] + " " + columnName[1]);
-            }
-            else {
-                charDescription[descI-1].setText(columnName[0]);
-            }
+        while (descI <= 8){
             charDescription[descI].setText(userCursor.getString(descIcolmn));
-            descI += 2;
+            descI += 1;
             descIcolmn++;
         }
 
@@ -177,6 +168,7 @@ public class CharActivity extends AppCompatActivity {
 
         customGridAdapterAscension = new CustomGridAdapter(ascensionMatsCount, ascensionMatsImages, color, this);
         gridViewAscension.setAdapter(customGridAdapterAscension);
+        gridViewAscension.setEnabled(false);
 
         talantMatsImages[0] = this.getResources().getIdentifier(userCursor.getString(22), "drawable", this.getPackageName());
         talantMatsImages[1] = this.getResources().getIdentifier(userCursor.getString(22) + "3", "drawable", this.getPackageName());
@@ -191,6 +183,7 @@ public class CharActivity extends AppCompatActivity {
 
         customGridAdapterTalant = new CustomGridAdapter(talantMatsCount, talantMatsImages, color, this);
         gridViewTalant.setAdapter(customGridAdapterTalant);
+        gridViewTalant.setEnabled(false);
 
         String[] consts = new String[6];
         int constI = 0;

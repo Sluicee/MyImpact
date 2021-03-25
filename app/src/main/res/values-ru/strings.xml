@@ -14,4 +14,24 @@
     <string name="europe">Европа</string>
     <string name="na">Северная Америка</string>
     <string name="asia">Азия</string>
+
+    <string name="countdown">Сброс дня через: </string>
+
+    <string name="AllegianceTitle">Принадлежность</string>
+    <string name="WeaponTypeTitle">Тип оружия</string>
+    <string name="ElementTitle">Элемент</string>
+    <string name="BDayTitle">День рождения</string>
+    <string name="AstrolabeNameTitle">Созвездие</string>
+    <string name="ChineseSeiyuuTitle">Кит. сэйю</string>
+    <string name="JapSeiyuuTitle">Яп. сэйю</string>
+    <string name="EngSeiyuuTitle">Англ. сэйю</string>
+    <string name="KorSeiyuuTitle">Кор. сэйю</string>
+    <string name="InGameDescTitle">Описание в игре</string>
+
+    <string name="DescriptionTitle">Описание</string>
+    <string name="BaseAttackTitle">Базовая атака</string>
+    <string name="SecStatTitle">Доп. характеристика</string>
+    <string name="BaseAttack90Title">Базовая атака на 90 ур.</string>
+    <string name="SecStat90Title">Доп. характеристика на 90 ур.</string>
+    <string name="PassiveTitle">Пассивная способность</string>
 </resources>

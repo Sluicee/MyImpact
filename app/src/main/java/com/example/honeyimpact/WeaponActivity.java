@@ -79,13 +79,7 @@ public class WeaponActivity extends AppCompatActivity {
         CustomGridAdapter customGridAdapterAscension;
 
         TextView[] weaponDescription = {
-                WeaponTypeTitle, WeaponTypeTW,
-                DescriptionTitle, DescriptionTW,
-                BaseAttackTitle, BaseAttackTW,
-                SecStatTitle, SecStatTW,
-                BaseAttack90Title, BaseAttack90TW,
-                SecStat90Title, SecStat90TW,
-                PassiveTitle, PassiveTW,
+                WeaponTypeTW,DescriptionTW,BaseAttackTW,SecStatTW,BaseAttack90TW,SecStat90TW,PassiveTW,
         };
 
         sqlHelper = new DatabaseHelper(this);
@@ -139,19 +133,11 @@ public class WeaponActivity extends AppCompatActivity {
                 break;
         }
 
-        int descI = 1;
+        int descI = 0;
         int descIcolmn = 4;
-        while (descI <= 14){
-            String[] columnName = (userCursor.getColumnName(descIcolmn)).split("(?=\\p{Upper})");
-            if (columnName.length > 1) {
-                weaponDescription[descI-1].setText(columnName[0] + " " + columnName[1]);
-            }
-            else {
-                weaponDescription[descI-1].setText(columnName[0]);
-            }
-            Log.d("TAG", "onCreate: " + userCursor.getString(descIcolmn) + " i: " + descI);
+        while (descI <= 6){
             weaponDescription[descI].setText(userCursor.getString(descIcolmn));
-            descI += 2;
+            descI += 1;
             descIcolmn++;
         }
 
@@ -172,6 +158,7 @@ public class WeaponActivity extends AppCompatActivity {
 
         customGridAdapterAscension = new CustomGridAdapter(ascensionMatsCount, ascensionMatsImages, bgcolor, this);
         gridViewAscension.setAdapter(customGridAdapterAscension);
+        gridViewAscension.setEnabled(false);
 
         userCursor.close();
 

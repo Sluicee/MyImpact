@@ -32,8 +32,10 @@
     <dimen name="listDividerWidth">50dp</dimen>
 
 
-    <dimen name="clockHeight">180dp</dimen>
+    <dimen name="clockHeight">150dp</dimen>
+    <dimen name="clockCountDownHeight">40dp</dimen>
     <dimen name="clockTextSize">60dp</dimen>
-    <dimen name="regionNameTextSize">40dp</dimen>
-    <dimen name="regionChangeTextSize">20dp</dimen>
+    <dimen name="clockCountDownTextSize">20sp</dimen>
+    <dimen name="regionNameTextSize">40sp</dimen>
+    <dimen name="regionChangeTextSize">20sp</dimen>
 </resources>

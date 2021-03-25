@@ -13,4 +13,24 @@
     <string name="europe">Europe</string>
     <string name="na">North America</string>
     <string name="asia">Asia</string>
+
+    <string name="countdown">Day Resets in: </string>
+
+    <string name="AllegianceTitle">Allegiance</string>
+    <string name="WeaponTypeTitle">Weapon Type</string>
+    <string name="ElementTitle">Element</string>
+    <string name="BDayTitle">Birth Day</string>
+    <string name="AstrolabeNameTitle">Astrolabe Name</string>
+    <string name="ChineseSeiyuuTitle">Chinese Seiyuu</string>
+    <string name="JapSeiyuuTitle">Japanese Seiyuu</string>
+    <string name="EngSeiyuuTitle">English Seiyuu</string>
+    <string name="KorSeiyuuTitle">Korean Seiyuu</string>
+    <string name="InGameDescTitle">In Game Description</string>
+
+    <string name="DescriptionTitle">Description</string>
+    <string name="BaseAttackTitle">Base Attack</string>
+    <string name="SecStatTitle">Second Stat</string>
+    <string name="BaseAttack90Title">Base Attack at 90 Level</string>
+    <string name="SecStat90Title">Second Stat at 90 Level</string>
+    <string name="PassiveTitle">Passive</string>
 </resources>

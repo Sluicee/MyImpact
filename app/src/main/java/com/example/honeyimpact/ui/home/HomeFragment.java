@@ -34,7 +34,9 @@ import com.example.honeyimpact.DatabaseHelper;
 import com.example.honeyimpact.R;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
@@ -50,7 +52,7 @@ public class HomeFragment extends Fragment {
 
     ImageView image;
 
-    TextView regionNameTW, clock;
+    TextView regionNameTW, clock, regionTimeCountDown;
     RadioGroup regionChangeRG;
     RadioButton europeRB, naRB, asiaRB;
 
@@ -60,6 +62,8 @@ public class HomeFragment extends Fragment {
     Date currentDate;
     boolean mActive;
     final Handler mHandler;
+    long endMills = 10800000;
+    String resetTime = "4:00:00";
 
     protected FragmentActivity mActivity;
 
@@ -69,6 +73,14 @@ public class HomeFragment extends Fragment {
                 if (clock != null) {
                     currentDate = new Date();
                     timeFormat = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
+                    currentTimeText = timeFormat.format(currentDate);
+                    try {
+                        long timeLeftMills = endMills - timeFormat.parse(currentTimeText).getTime();
+                        Date timeLeft = new Date(timeLeftMills);
+                        regionTimeCountDown.setText(timeFormat.format(timeLeft));
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
                     timeFormat.setTimeZone(TimeZone.getTimeZone(currentTimeZone));
                     currentTimeText = timeFormat.format(currentDate);
                     clock.setText(currentTimeText);
@@ -88,11 +100,13 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         regionNameTW = root.findViewById(R.id.regionName);
+        regionTimeCountDown = root.findViewById(R.id.regionTimeCountDown);
         clock = root.findViewById(R.id.regionTime);
         regionChangeRG = root.findViewById(R.id.regionChangeRG);
         europeRB = root.findViewById(R.id.rbEurope);
         naRB = root.findViewById(R.id.rbNA);
         asiaRB = root.findViewById(R.id.rbAsia);
+
 
         startClock();
 
@@ -102,14 +116,17 @@ public class HomeFragment extends Fragment {
                 switch (checkedId) {
                     case R.id.rbEurope:
                         currentTimeZone = "Etc/UTC";
+                        endMills = 10800000;
                         regionNameTW.setText(getResources().getString(R.string.europe));
                         break;
                     case R.id.rbNA:
                         currentTimeZone = "America/Chicago";
+                        endMills = -54000000;
                         regionNameTW.setText(getResources().getString(R.string.na));
                         break;
                     case R.id.rbAsia:
                         currentTimeZone = "Asia/Shanghai";
+                        endMills = -14400000;
                         regionNameTW.setText(getResources().getString(R.string.asia));
                         break;
                     default:

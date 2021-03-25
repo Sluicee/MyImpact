@@ -28,39 +28,67 @@
         android:text="00:00:00"
         android:textSize="@dimen/clockTextSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regionName" />
+
+    <LinearLayout
+        android:id="@+id/countdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regionTime"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/clockCountDownHeight"
+            android:fontFamily="@font/ja_jp"
+            android:text="@string/countdown"
+            android:textSize="@dimen/clockCountDownTextSize"
+            />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/regionTimeCountDown"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/clockCountDownHeight"
+            android:fontFamily="@font/ja_jp"
+            android:text="00:00:00"
+            android:textSize="@dimen/clockCountDownTextSize"
+            />
+    </LinearLayout>
+
 
     <RadioGroup
         android:id="@+id/regionChangeRG"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regionTime"
-        android:gravity="center">
+        app:layout_constraintTop_toBottomOf="@+id/countdown">
 
         <RadioButton
             android:id="@+id/rbEurope"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@null"
+            android:checked="true"
             android:fontFamily="@font/ja_jp"
             android:text="@string/europe"
-            android:textSize="@dimen/regionChangeTextSize"
-            android:checked="true"/>
+            android:textSize="@dimen/regionChangeTextSize" />
 
         <RadioButton
             android:id="@+id/rbNA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/regionChangeTextSize"
             android:button="@null"
             android:fontFamily="@font/ja_jp"
             android:text="@string/na"
-            android:textSize="@dimen/regionChangeTextSize"
-            android:layout_margin="@dimen/regionChangeTextSize"/>
+            android:textSize="@dimen/regionChangeTextSize" />
 
         <RadioButton
             android:id="@+id/rbAsia"

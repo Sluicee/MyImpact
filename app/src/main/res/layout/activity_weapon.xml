@@ -43,7 +43,6 @@
             android:textColor="@color/grey"
             android:textSize="@dimen/weaponActivityWeaponNameSize"
             app:layout_constraintBottom_toBottomOf="@+id/gridItem"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/gridItem"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,7 +66,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/DescriptionTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
 
                 <TextView
@@ -89,7 +88,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/WeaponTypeTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/WeaponTypeTW"
@@ -109,7 +108,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/BaseAttackTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/BaseAttackTW"
@@ -129,7 +128,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/SecStatTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/SecStatTW"
@@ -149,7 +148,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/BaseAttack90Title"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/BaseAttack90TW"
@@ -169,7 +168,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/SecStat90Title"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/SecStat90TW"
@@ -189,7 +188,7 @@
                     android:layout_width="@dimen/charActivityCharDescNameWidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ja_jp"
-                    android:text="TextView"
+                    android:text="@string/PassiveTitle"
                     android:textSize="@dimen/charActivityCharTitleSize" />
                 <TextView
                     android:id="@+id/PassiveTW"
