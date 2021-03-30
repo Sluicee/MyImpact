@@ -79,7 +79,7 @@ public class WeaponActivity extends AppCompatActivity {
         CustomGridAdapter customGridAdapterAscension;
 
         TextView[] weaponDescription = {
-                WeaponTypeTW,DescriptionTW,BaseAttackTW,SecStatTW,BaseAttack90TW,SecStat90TW,PassiveTW,
+                DescriptionTW,WeaponTypeTW,BaseAttackTW,SecStatTW,BaseAttack90TW,SecStat90TW,PassiveTW,
         };
 
         sqlHelper = new DatabaseHelper(this);
